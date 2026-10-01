@@ -1,0 +1,218 @@
+[
+  {
+    "id": "osh",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=85",
+    "name": "Osh (Palov)",
+    "price": 35000,
+    "category": "Asosiy taom",
+    "emoji": "🍛",
+    "desc": "An’anaviy o‘zbek palovi."
+  },
+  {
+    "id": "shashlik",
+    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=800&q=85",
+    "name": "Shashlik",
+    "price": 18000,
+    "category": "Gril",
+    "emoji": "🍢",
+    "desc": "Yangi pishirilgan, shirali kabob."
+  },
+  {
+    "id": "gril-tovuq",
+    "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=85",
+    "name": "Gril tovuq",
+    "price": 25000,
+    "category": "Gril",
+    "emoji": "🍗",
+    "desc": "Ziravorlar bilan grilda pishirilgan tovuq."
+  },
+  {
+    "id": "gril-bifshteks",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85",
+    "name": "Gril bifshteks",
+    "price": 45000,
+    "category": "Gril",
+    "emoji": "🥩",
+    "desc": "Grilda pishirilgan shirali go‘sht."
+  },
+  {
+    "id": "gril-sabzavot",
+    "image": "https://images.unsplash.com/photo-1551751299-1b51cab2694c?auto=format&fit=crop&w=800&q=85",
+    "name": "Gril sabzavotlar",
+    "price": 20000,
+    "category": "Gril",
+    "emoji": "🥗",
+    "desc": "Grilda pishirilgan mavsumiy sabzavotlar."
+  },
+  {
+    "id": "lagmon",
+    "image": "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=800&q=85",
+    "name": "Lag‘mon",
+    "price": 28000,
+    "category": "Xamirli taom",
+    "emoji": "🍜",
+    "desc": "Uy usulida tayyorlangan lag‘mon."
+  },
+  {
+    "id": "manti",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=800&q=85",
+    "name": "Manti",
+    "price": 30000,
+    "category": "Xamirli taom",
+    "emoji": "🥟",
+    "desc": "Bug‘da pishirilgan mazali manti."
+  },
+  {
+    "id": "somsa",
+    "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=85",
+    "name": "Somsa",
+    "price": 12000,
+    "category": "Xamirli taom",
+    "emoji": "🥮",
+    "desc": "Go‘shtli tandir somsasi."
+  },
+  {
+    "id": "shurva",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85",
+    "name": "Sho‘rva",
+    "price": 27000,
+    "category": "Asosiy taom",
+    "emoji": "🍲",
+    "desc": "To‘yimli milliy sho‘rva"
+  },
+  {
+    "id": "norin",
+    "image": "https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=800&q=85",
+    "name": "Norin",
+    "price": 32000,
+    "category": "Asosiy taom",
+    "emoji": "🍜",
+    "desc": "An’anaviy norin."
+  },
+  {
+    "id": "qozonkabob",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=85",
+    "name": "Qozon kabob",
+    "price": 42000,
+    "category": "Asosiy taom",
+    "emoji": "🥘",
+    "desc": "Kartoshka va go‘sht bilan tayyorlangan."
+  },
+  {
+    "id": "cola",
+    "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=800&q=85",
+    "name": "Coca-Cola",
+    "price": 10000,
+    "category": "Salqin ichimliklar",
+    "emoji": "🥤",
+    "desc": "Sovutilgan Coca-Cola"
+  },
+  {
+    "id": "fanta",
+    "image": "https://images.unsplash.com/photo-1624517452488-04869289c4ca?auto=format&fit=crop&w=800&q=85",
+    "name": "Fanta",
+    "price": 10000,
+    "category": "Salqin ichimliklar",
+    "emoji": "🥤",
+    "desc": "Apelsin ta’mli, sovutilgan Fanta."
+  },
+  {
+    "id": "mojito",
+    "image": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=800&q=85",
+    "name": "Moxito (Mojito)",
+    "price": 15000,
+    "category": "Salqin ichimliklar",
+    "emoji": "🍹",
+    "desc": "Yalpiz, лайм va muz bilan tayyorlangan salqin moxito."
+  },
+  {
+    "id": "suv",
+    "image": "https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=800&q=85",
+    "name": "Mineral suv",
+    "price": 5000,
+    "category": "Salqin ichimliklar",
+    "emoji": "💧",
+    "desc": "Salqin ichimlik suvi"
+  },
+  {
+    "id": "sharbat",
+    "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=85",
+    "name": "Meva sharbati",
+    "price": 12000,
+    "category": "Salqin ichimliklar",
+    "emoji": "🧃",
+    "desc": "Tabiiy meva sharbati"
+  },
+  {
+    "id": "philadelphia",
+    "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=85",
+    "name": "Filadelfiya roll",
+    "price": 45000,
+    "category": "Sushi va rollar",
+    "emoji": "🍣",
+    "desc": "Losos va qaymoqli pishloqli roll (8 dona)"
+  },
+  {
+    "id": "california",
+    "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=800&q=85",
+    "name": "Kaliforniya roll",
+    "price": 40000,
+    "category": "Sushi va rollar",
+    "emoji": "🍣",
+    "desc": "Qisqichbaqa va bodringli roll (8 dona)"
+  },
+  {
+    "id": "tuna",
+    "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=800&q=85",
+    "name": "Tuna roll",
+    "price": 42000,
+    "category": "Sushi va rollar",
+    "emoji": "🍣",
+    "desc": "Tunetsli sushi roll (8 dona)"
+  },
+  {
+    "id": "veggie",
+    "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=800&q=85",
+    "name": "Sabzavotli roll",
+    "price": 35000,
+    "category": "Sushi va rollar",
+    "emoji": "🥑",
+    "desc": "Bodring, avokado va sabzavotli roll (8 dona)"
+  },
+  {
+    "id": "napoleon",
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85",
+    "name": "Napoleon torti",
+    "price": 15000,
+    "category": "Desertlar",
+    "emoji": "🍰",
+    "desc": "Qatlamli kremli tort (1 bo‘lak)"
+  },
+  {
+    "id": "medovik",
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=85",
+    "name": "Medovik",
+    "price": 14000,
+    "category": "Desertlar",
+    "emoji": "🍯",
+    "desc": "Asalli qatlamli tort (1 bo‘lak)"
+  },
+  {
+    "id": "baklava",
+    "image": "https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=85",
+    "name": "Paxlava",
+    "price": 12000,
+    "category": "Desertlar",
+    "emoji": "🍯",
+    "desc": "Yong‘oqli sharqona shirinlik"
+  },
+  {
+    "id": "cheesecake",
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=85",
+    "name": "Chizkeyk",
+    "price": 16000,
+    "category": "Desertlar",
+    "emoji": "🍰",
+    "desc": "Mayin pishloqli desert"
+  }
+]

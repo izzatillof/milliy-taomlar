@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173d2a">
+<title>Milliy taomlar buyurtmasi</title>
+<style>
+:root{--green:#173d2a;--green2:#24583c;--gold:#f0b84b;--cream:#fffaf0;--muted:#6d756e;--line:#e9e5da;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--cream);color:#202820}
+header{background:var(--green);color:white;padding:18px 5vw 30px}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}.logo{width:48px;height:48px;border-radius:15px;background:var(--gold);color:var(--green);display:grid;place-items:center;font-size:27px;box-shadow:inset 0 0 0 2px #ffffff70}
+.brand small{display:block;font-size:11px;color:#d9e6dc;font-weight:500;letter-spacing:1.5px;margin-top:4px}
+.nav-pill{border:1px solid #ffffff50;border-radius:999px;padding:10px 14px;font-size:13px}
+.hero{max-width:1200px;margin:34px auto 0;display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:25px}
+.eyebrow{color:var(--gold);font-weight:700;letter-spacing:2px;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:12px 0;max-width:680px}
+.hero p{color:#d9e6dc;line-height:1.7;max-width:540px}
+.hero-art{min-height:190px;border-radius:28px;background:radial-gradient(circle at 50% 40%,#fff1c5,#e8b95b 60%,#c88c35);display:grid;place-items:center;font-size:clamp(90px,15vw,150px);box-shadow:0 18px 40px #0002}
+main{max-width:1200px;margin:30px auto;padding:0 20px 50px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:28px 0 18px}.section-head h2{margin:0;font-size:26px}.section-head p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.search{max-width:280px;width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:12px;background:white;font:inherit}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;align-items:start}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}
+.filter{border:1px solid var(--line);border-radius:999px;background:white;padding:9px 14px;cursor:pointer;color:#455047}.filter.active{background:var(--green);color:white;border-color:var(--green)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.item{background:white;border:1px solid #eee9df;border-radius:18px;padding:13px;box-shadow:0 5px 18px #233b2410;display:flex;flex-direction:column;min-width:0}
+.food-art{height:130px;border-radius:13px;background:linear-gradient(135deg,#f9edcf,#f2d8a1);display:grid;place-items:center;font-size:67px;margin-bottom:13px}
+.item h3{font-size:17px;margin:0 0 5px}.desc{font-size:12px;color:var(--muted);line-height:1.5;min-height:36px}.item-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:14px}.price{font-weight:800;color:var(--green);font-size:15px}
+.add{background:var(--green);color:white;border:0;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}.add:hover,.checkout:hover{background:var(--green2)}
+.cart{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;position:sticky;top:15px;box-shadow:0 8px 25px #233b240c}
+.cart h2{font-size:21px;margin:0}.cart-sub{color:var(--muted);font-size:13px;margin:6px 0 17px}
+.cart-items{max-height:240px;overflow:auto}.empty{text-align:center;padding:22px 8px;color:var(--muted);font-size:14px}
+.cart-row{display:grid;grid-template-columns:1fr auto;gap:8px;border-bottom:1px solid #f0eee8;padding:11px 0;font-size:13px}.cart-row strong{display:block;font-size:14px;margin-bottom:4px}.qty{display:flex;align-items:center;gap:9px;color:var(--muted)}.qty button{border:1px solid var(--line);background:#fff;border-radius:6px;width:23px;height:23px;cursor:pointer}
+.total{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px;margin-top:8px;font-weight:800;font-size:17px}
+.form-title{font-size:16px;margin:22px 0 10px}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:6px 0;font:inherit;font-size:14px;background:#fff}.checkout{width:100%;border:0;border-radius:11px;background:var(--green);color:white;padding:14px;font-weight:800;font-size:15px;margin-top:10px;cursor:pointer}.note{font-size:11px;color:var(--muted);line-height:1.5;margin:10px 0 0}
+footer{text-align:center;padding:24px;color:#dce7de;background:#10291c;font-size:13px}
+.toast{display:none;padding:12px;border-radius:10px;margin-top:10px;font-size:13px;line-height:1.5}.toast.show{display:block}.toast.ok{background:#e9f7ed;color:#1c6631}.toast.err{background:#fff0ec;color:#a53a24}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.cart{position:static}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr .55fr}}
+@media(max-width:560px){header{padding:15px 18px 25px}.nav-pill{display:none}.hero{grid-template-columns:1fr;margin-top:25px}.hero-art{min-height:130px;font-size:95px}.section-head{align-items:stretch;flex-direction:column}.search{max-width:none}.menu-grid{grid-template-columns:1fr 1fr;gap:10px}.item{padding:9px}.food-art{height:100px;font-size:52px}.item h3{font-size:15px}.desc{font-size:11px}.item-bottom{align-items:flex-start;flex-direction:column}.add{width:100%}main{padding:0 12px 35px}}
+
+.food-photo{width:100%;height:175px;display:block;object-fit:cover;border-radius:14px;margin-bottom:12px;background:#f2eee5}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand"><div class="logo">♨</div><div>MILLIY TAOMLAR<small>BUYURTMASI</small></div></div>
+    <div style="display:flex;align-items:center;gap:10px"><a href="/admin" class="nav-pill" style="color:white;text-decoration:none">⚙ Admin panel</a><div class="nav-pill">🇺🇿 Milliy ta’m — dasturxoningizda</div></div>
+  </div>
+  <section class="hero">
+    <div><div class="eyebrow">Mazali • Yangi • Milliy</div><h1>Sevimli taomingizni<br>uyingizga buyurtma qiling</h1><p>O‘zbek milliy taomlari — mehr bilan tayyorlanadi va sizga yetkaziladi. Menyudan tanlang, savatchaga qo‘shing va buyurtma bering.</p></div>
+    <div class="hero-art" aria-label="Osh tasviri">🍛</div>
+  </section>
+</header>
+<main>
+  <div class="section-head"><div><h2>Taomlar menyusi</h2><p>Bugun nima tanovul qilamiz?</p></div><input class="search" id="search" placeholder="🔎 Taom qidirish..." aria-label="Taom qidirish"></div>
+  <div class="layout">
+    <section>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="Barchasi">Barchasi</button>
+        <button class="filter" data-category="Asosiy taom">Asosiy taom</button>
+        <button class="filter" data-category="Xamirli taom">Xamirli taom</button>
+        <button class="filter" data-category="Gril">Gril</button>
+        <button class="filter" data-category="Salqin ichimliklar">🥤 Salqin ichimliklar</button>
+        <button class="filter" data-category="Sushi va rollar">🍣 Sushi va rollar</button>
+        <button class="filter" data-category="Desertlar">🍰 Desertlar</button>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+    <aside class="cart">
+      <h2>🛒 Savatchangiz</h2><div class="cart-sub">Buyurtmangizni shu yerda tekshiring</div>
+      <div class="cart-items" id="cart-items"><div class="empty">Savatchangiz hozircha bo‘sh.<br>O‘zingizga yoqqan taomni tanlang.</div></div>
+      <div class="total"><span>Jami:</span><span id="total-price">0 so‘m</span></div>
+      <form id="order-form">
+        <h3 class="form-title">Yetkazib berish uchun ma’lumotlar</h3>
+        <input class="field" id="client-name" placeholder="Ism-familiyangiz" required>
+        <input class="field" id="client-phone" type="tel" placeholder="Telefon raqamingiz: +998..." required>
+        <textarea class="field" id="client-address" placeholder="Yetkazib berish manzili" rows="3" required></textarea>
+        <button class="checkout" type="submit">Buyurtma berish →</button>
+        <p class="note">Buyurtma ma’lumotlari server orqali Telegram’ga yuboriladi. Telegram sozlamalari serverda kiritilishi kerak.</p>
+        <div id="toast" class="toast" role="status"></div>
+      </form>
+    </aside>
+  </div>
+</main>
+<footer>
+  <div>© 2026 Milliy taomlar buyurtmasi · Milliy ta’m, samimiy xizmat ❤️</div>
+  <div style="margin-top:10px;line-height:1.8">
+    <span><strong></strong></span>
+    <span style="margin:0 8px;color:#8ea393">|</span>
+    
+    <div class="author-card" style="margin:14px 0 12px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(240,184,75,.45);text-align:center">
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#f0b84b;margin-bottom:5px">Loyiha muallifi</div>
+      <div style="font-size:17px;font-weight:700;color:#fff">Fayzullayev Izzatillo</div>
+    </div>
+    <a href="https://www.instagram.com/fayzullaev_ix/" target="_blank" rel="noopener noreferrer"
+       style="color:#f0b84b;text-decoration:none;font-weight:700">◎ @fayzullaev_ix</a>
+    <div style="font-size:12px;color:#b8c9bc">Personal blog</div>
+    <div style="margin-top:8px">
+      <span style="margin-right:8px">Taomlar sahifasi:</span>
+      <a href="https://www.instagram.com/fx_taomlari/" target="_blank" rel="noopener noreferrer"
+         style="color:#f0b84b;text-decoration:none;font-weight:700">◎ @fx_taomlari</a>
+    </div>
+  </div>
+</footer>
+<script>
+let foods = [];
+async function loadFoods(){const r=await fetch('/api/menu');if(!r.ok)throw new Error('Menyuni yuklab bo‘lmadi');foods=await r.json();renderMenu();}
+
+let cart = [];
+let activeCategory = 'Barchasi';
+const money = n => n.toLocaleString('uz-UZ') + ' so‘m';
+function renderMenu(){
+ const q=document.getElementById('search').value.trim().toLocaleLowerCase('uz');
+ const list=foods.filter(f=>(activeCategory==='Barchasi'||f.category===activeCategory)&&f.name.toLocaleLowerCase('uz').includes(q));
+ document.getElementById('menu-grid').innerHTML=list.map(f=>`<article class="item"><img class="food-photo" src="${f.image}" alt="${f.name}" loading="lazy" onerror="this.style.display='none'"><h3>${f.name}</h3><div class="desc">${f.desc}</div><div class="item-bottom"><div class="price">${money(f.price)}</div><button class="add" onclick="addToCart('${f.id}')">+ Savatchaga</button></div></article>`).join('') || '<p>Bu bo‘limda mahsulot topilmadi.</p>';
+}
+function addToCart(id){const food=foods.find(f=>f.id===id);const found=cart.find(i=>i.id===id);if(found)found.qty++;else cart.push({...food,qty:1});renderCart();}
+function changeQty(id,delta){const item=cart.find(i=>i.id===id);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(i=>i.id!==id);renderCart();}
+function renderCart(){
+ const box=document.getElementById('cart-items');
+ if(!cart.length)box.innerHTML='<div class="empty">Savatchangiz hozircha bo‘sh.<br>O‘zingizga yoqqan taomni tanlang.</div>';
+ else box.innerHTML=cart.map(i=>`<div class="cart-row"><div><strong>${i.name}</strong><div class="qty"><button type="button" aria-label="Kamaytirish" onclick="changeQty('${i.id}',-1)">−</button><span>${i.qty} dona</span><button type="button" aria-label="Ko‘paytirish" onclick="changeQty('${i.id}',1)">+</button></div></div><b>${money(i.price*i.qty)}</b></div>`).join('');
+ document.getElementById('total-price').textContent=money(cart.reduce((s,i)=>s+i.price*i.qty,0));
+}
+document.getElementById('search').addEventListener('input',renderMenu);
+document.getElementById('filters').addEventListener('click',e=>{const b=e.target.closest('button[data-category]');if(!b)return;activeCategory=b.dataset.category;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderMenu();});
+document.getElementById('order-form').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const toast=document.getElementById('toast');
+ const show=(msg,ok=false)=>{toast.textContent=msg;toast.className='toast show '+(ok?'ok':'err');};
+ if(!cart.length){show('Savatchangiz bo‘sh. Avval taom tanlang.');return;}
+ const order={name:document.getElementById('client-name').value.trim(),phone:document.getElementById('client-phone').value.trim(),address:document.getElementById('client-address').value.trim(),items:cart.map(({id,name,price,qty})=>({id,name,price,quantity:qty}))};
+ const btn=e.submitter;btn.disabled=true;btn.textContent='Yuborilmoqda...';
+ try{
+   const response=await fetch('/api/order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(order)});
+   const result=await response.json().catch(()=>({}));
+   if(!response.ok)throw new Error(result.error||'Buyurtmani yuborib bo‘lmadi.');
+   show('Rahmat! Buyurtmangiz qabul qilindi.',true);cart=[];renderCart();e.target.reset();
+ }catch(err){show(err.message.includes('Failed to fetch')?'Server ishga tushmagan. README faylidagi ko‘rsatmalarni bajaring.':err.message);}
+ finally{btn.disabled=false;btn.textContent='Buyurtma berish →';}
+});
+loadFoods().catch(e=>{document.getElementById('menu-grid').textContent=e.message});renderCart();
+</script>
+</body>
+</html>
